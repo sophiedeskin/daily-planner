@@ -11,7 +11,6 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-  background-color: lightgray;
 }
 
 .jumbotron {
@@ -21,7 +20,9 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
+.container {
+  padding-bottom: 15px;
+}
 .description {
   white-space: pre-wrap;
 }
@@ -33,7 +34,6 @@ textarea {
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
   border-top: 1px solid white;
 }
 
