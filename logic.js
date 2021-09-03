@@ -6,7 +6,7 @@ const date = new Date();
     const hour = date.getHours();
 
 
-
+//getting input from users entry and parsing it and saving it to the page
 var parsed9 = JSON.parse(localStorage.getItem("9"));
 $("#text9").val(parsed9.text);
 
@@ -36,26 +36,18 @@ $("#text17").val(parsed17.text);
 
 // Find all .time-block elements
 $(".time-block").each(function (i, object) {
-const hour = object.id;
-if(hour === date.getHours()) {
-//     //current hour
-document.getElementById(`text${object.id}`).style.backgroundColor = "red"
+    //converting our string into an integer
+const hour = parseInt(object.id);
+if (hour === date.getHours()) {
+     //current hour
+     document.getElementById(`text${object.id}`).style.backgroundColor = "red"
 }else if (hour > date.getHours()){
+    //future hour
      document.getElementById(`text${object.id}`).style.backgroundColor = "green"
-//     //future hour
  }else {
-//     //past hour
+     //past hour
  document.getElementById(`text${object.id}`).style.backgroundColor = "grey"
 }
-
-
-
-    // see if you have any data in local storage for each text area
-    if (object.id) {
-      // place that text
-      console.log(object.id);
-    }
-    // apply the class for if the time block is current, in the past, or future
   });
 
   $(".saveBtn").on("click", function (event) {
@@ -64,19 +56,16 @@ document.getElementById(`text${object.id}`).style.backgroundColor = "red"
     const val = $(this).siblings("textarea").eq(0).val().trim();
     // retrieve the id from the parent
     const id = $(this).parent().attr("id");
-    console.log(val)
-    console.log(id)
     const data = {time:id, text:val}
-    // save to localstorage
+    // save to localstorage and turning back into a string
     localStorage.setItem(id, JSON.stringify(data));
-    console.log(data)
   });
     
-
+//placing our formated date into its section
   setInterval(function () {
     document.getElementById("currentDay").innerHTML = formatDate(new Date());
   }, 1000);
-  
+  //formatting date
   function formatDate(today) {
     var year = today.getFullYear(),
       month = today.getMonth() + 1,
