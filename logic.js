@@ -52,32 +52,43 @@ if (hour === date.getHours()) {
     return `${month}/${date}/${year} ${hour}:${minutes}:${seconds}`;
   }
 
-  var parsed9 = JSON.parse(localStorage.getItem("9"));
+
+  if (localStorage.getItem("9")) {
+    var parsed9 = JSON.parse(localStorage.getItem("9"));
   $("#text9").val(parsed9.text);
-  
-  var parsed10 = JSON.parse(localStorage.getItem("10"));
+  }
+  if (localStorage.getItem("10")) {
+    var parsed10 = JSON.parse(localStorage.getItem("10"));
   $("#text10").val(parsed10.text);
-  
-  var parsed11 = JSON.parse(localStorage.getItem("11"));
+  }
+  if (localStorage.getItem("11")) {
+    var parsed11 = JSON.parse(localStorage.getItem("11"));
   $("#text11").val(parsed11.text);
-  
-  var parsed12 = JSON.parse(localStorage.getItem("12"));
+  }
+  if (localStorage.getItem("12")) {
+    var parsed12 = JSON.parse(localStorage.getItem("12"));
   $("#text12").val(parsed12.text);
-  
-  var parsed13 = JSON.parse(localStorage.getItem("13"));
+  }
+  if (localStorage.getItem("13")) {
+    var parsed13 = JSON.parse(localStorage.getItem("13"));
   $("#text13").val(parsed13.text);
-  
-  var parsed14 = JSON.parse(localStorage.getItem("14"));
+  }
+  if (localStorage.getItem("14")) {
+    var parsed14 = JSON.parse(localStorage.getItem("14"));
   $("#text14").val(parsed14.text);
-  
-  var parsed15 = JSON.parse(localStorage.getItem("15"));
+  }
+  if (localStorage.getItem("15")) {
+    var parsed15 = JSON.parse(localStorage.getItem("15"));
   $("#text15").val(parsed15.text);
-  
-  var parsed16 = JSON.parse(localStorage.getItem("16"));
+  }
+  if (localStorage.getItem("16")) {
+    var parsed16 = JSON.parse(localStorage.getItem("16"));
   $("#text16").val(parsed16.text);
-  
-  var parsed17 = JSON.parse(localStorage.getItem("17"));
+  }
+  if (localStorage.getItem("17")) {
+    var parsed17 = JSON.parse(localStorage.getItem("17"));
   $("#text17").val(parsed17.text);
+  }
 
 
 
