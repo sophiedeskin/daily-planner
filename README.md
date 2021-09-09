@@ -1,6 +1,6 @@
 # daily-planner
 
-Active Link: file:///C:/Users/16618/bootcamp/homeworks/daily-planner/index.html
+Active Link: https://sophiedeskin.github.io/daily-planner/
 
 05 Third-Party APIs: Work Day Scheduler
 Your Task
